@@ -1,12 +1,12 @@
 import java.util.*;
 public class MonkeyApp{
 	public static void main(String[] args){
-		Monkey m = new Monkey();
 		Scanner scan = new Scanner(System.in);
 		System.out.print("おさるの名前を決めてください:>");
-		m.name = scan.nextLine();
+		String name = scan.nextLine();
 		System.out.print("おさるの歳を決めてください:>");
-		m.age = scan.nextInt();
+		int age = scan.nextInt();
+		Monkey m = new Monkey(name,age);
 		int gei;
 		do{
 			System.out.print("おさるに何をさせますか？1…挨拶、2…竹馬、3…逆立ち、4…終了>");
